@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonlightMart- India's Shopping Hub</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">MoonlightMart</div>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/Chandni/Desktop/ProEcomm/index.html">Home</a></li>
+                <li><a href="https://dribbble.com/tags/shop-page">Shop</a></li>
+                <li><a href="https://dribbble.com/tags/category-page">Categories</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products, brands...">
+        </div>
+        <div class="cart-container" id="cartToggle">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content cart-modal-content">
+            <span class="close-modal" id="closeCartModal">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cartItemsContainer">
+                <!-- Cart items inserted here -->
+            </div>
+            <div class="cart-summary hidden" id="cartSummary">
+                <div class="cart-total">
+                    <strong>Grand Total:</strong> <span id="cartGrandTotal">₹0</span>
+                </div>
+                <div class="cart-actions">
+                    <button id="clearCartBtn" class="clear-btn">Clear Cart</button>
+                    <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+            <div id="emptyCartMessage" class="empty-cart-message">Your cart is empty.</div>
+        </div>
+    </div>
+
+    <!-- Buy Now Modal -->
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeBuyModal">&times;</span>
+            <h2>Checkout</h2>
+            <div id="modalDetails"></div>
+            <button id="confirmOrderBtn" class="confirm-btn">Confirm Order</button>
+            <div id="successMessage" class="success-message">Order placed successfully!</div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
